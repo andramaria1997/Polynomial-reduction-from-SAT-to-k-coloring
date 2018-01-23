@@ -1,0 +1,6 @@
+			***** README *****
+
+
+
+	Pentru fiecare nod din graf se creeaza o clauza in felul urmator: toate culorile cu SAU intre ele. De exemplu, pentru nodul 1, vom avea: (nod1_rosu SAU nod1_galben SAU nod1_verde). Analog pt toate nodurile, combinand toate culorile. Apoi, este nevoie sa ne asiguram ca un nod nu poate fi colorat cu 2 culori. Deci, pentru fiecare nod vom avea urmatoarele clauze: (NOT nod1_rosu SAU NOT nod1_galben) SI (NOT nod1_galben SAU NOT nod1_verde) SI (NOT nod1_rosu SAU NOT nod1_verde), combinand culorile 2 cate 2, pentru toate nodurile, astfel incat daca un nod are 'true' pentru 2 culori, clauza va rezulta 'fals'. In continuare trebuie impusa conditia de a nu exista 2 culori vecine. Pentru fiecare muchie in parte se creeaza clauze de tipul (NOT nodi_verde SAU NOT nodj_verde), avand muchie intre nodul i si nodul j, si facand acest lucru pentru toate culorile disponibile. Daca doua noduri care au muchie intre ele vor avea aceeasi culoare, acea paranteza va avea valoarea 'false'.
+	Metoda prezentata anterior este implementanta in C utilizand notatiile impuse de enunt.
